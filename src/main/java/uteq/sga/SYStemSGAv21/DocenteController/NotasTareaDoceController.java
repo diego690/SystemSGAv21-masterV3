@@ -25,7 +25,7 @@ import uteq.sga.SYStemSGAv21.Services.INotasTareasServices;
  */
 @Controller
 @RequestMapping("/Docente/NotasTareas")
-public class NotasTareaAdminController {
+public class NotasTareaDoceController {
     
     @Autowired
     private INotasTareasServices notaserv;

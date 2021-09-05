@@ -30,7 +30,7 @@ import uteq.sga.SYStemSGAv21.Services.IPlanificacionTareasServices;
  */
 @Controller
 @RequestMapping("/Docente/PlanificacionTarea")
-public class PlanificacionTareaController {
+public class PlanificacionTareaDoceController {
     
     @Autowired
     private IPlanificacionTareasServices ipts;

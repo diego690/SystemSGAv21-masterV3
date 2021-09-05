@@ -26,7 +26,7 @@ import uteq.sga.SYStemSGAv21.Services.IEstudiantesServices;
  */
 @Controller
 @RequestMapping("/Docente/EntregaTareas")
-public class EntregaTareasAdminController {
+public class EntregaTareasDoceController {
     @Autowired
     private IEntregaTareasServices ent_tar_Serv;
     

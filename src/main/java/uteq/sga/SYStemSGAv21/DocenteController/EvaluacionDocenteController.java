@@ -16,74 +16,82 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import uteq.sga.SYStemSGAv21.Entity.Asignaturas;
-import uteq.sga.SYStemSGAv21.Entity.Carreras;
-import uteq.sga.SYStemSGAv21.Entity.PlanEstudio;
+import uteq.sga.SYStemSGAv21.Entity.Docentes;
+import uteq.sga.SYStemSGAv21.Entity.Estudiantes;
+import uteq.sga.SYStemSGAv21.Entity.Evaluaciones;
 import uteq.sga.SYStemSGAv21.Services.IAsignaturaServices;
-import uteq.sga.SYStemSGAv21.Services.ICarrerasServices;
-import uteq.sga.SYStemSGAv21.Services.IPlanEstudioServices;
+import uteq.sga.SYStemSGAv21.Services.IDocentesServices;
+import uteq.sga.SYStemSGAv21.Services.IEstudiantesServices;
+import uteq.sga.SYStemSGAv21.Services.IEvaluacionesServices;
 
 /**
  *
  * @author capur
  */
 @Controller
-@RequestMapping("/Docente/PlanEstudio")
-public class PlanEstudioController {
+@RequestMapping("/Docente/Evaluacion")
+public class EvaluacionDocenteController {
+    
+     @Autowired
+    private IEvaluacionesServices evaServ;
     
     @Autowired
-    private IAsignaturaServices asigServ;
+    private IDocentesServices doceServ;
     
     @Autowired
-    private ICarrerasServices cursoServ;
+    private IAsignaturaServices asignaturaServ;
     
     @Autowired
-    private IPlanEstudioServices planServ;
+    private IEstudiantesServices estuServ;
+    
+ 
     
     @RequestMapping("/listar")
     public String page(Model model) {
-       
-        List<PlanEstudio> plan = planServ.listarTodos();
-         model.addAttribute("planestudio", plan);
-        return "/Docente/PlanEstudiolist";
+        List<Evaluaciones> evalua = evaServ.listarTodos();
+        model.addAttribute("evaluacion", evalua);
+        return "/Docente/Evaluacionlist";
     }
      @GetMapping("/Create")
     public String crear(Model model){
       
-        List<Asignaturas> asignatura = asigServ.listarTodos();
-         List<Carreras> curso = cursoServ.listarTodos();
-         
-          PlanEstudio plan = new PlanEstudio();
+        List<Asignaturas> asignatura = asignaturaServ.listarTodos();
+         List<Docentes> docente = doceServ.listarTodos();
+          List<Estudiantes> estudiante = estuServ.listarTodos();
+          Evaluaciones evalua = new Evaluaciones();
         model.addAttribute("titulo", "Lista de Docentes");
      
-        model.addAttribute("planestudio", plan);
+        model.addAttribute("evaluacion", evalua);
         model.addAttribute("asignaturas", asignatura);
-    
+        model.addAttribute("docentes", docente);
+        model.addAttribute("estudiantes", estudiante);
         
         return "/Docente/Evaluacionadd";
     }
     @PostMapping("/save")
-    public String guarda(@ModelAttribute PlanEstudio user){
-        planServ.guardar(user);
+    public String guarda(@ModelAttribute Evaluaciones user){
+        evaServ.guardar(user);
         System.out.println("Registro registrado correctamente");
         return "redirect:/Docente/Evaluacion/listar";
     }
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Integer id,Model model){
-        List<Asignaturas> asignatura = asigServ.listarTodos();
-         List<Carreras> curso = cursoServ.listarTodos();
-         
-          PlanEstudio plan = planServ.buscaById(id);
+         List<Asignaturas> asignatura = asignaturaServ.listarTodos();
+         List<Docentes> docente = doceServ.listarTodos();
+          List<Estudiantes> estudiante = estuServ.listarTodos();
+          Evaluaciones evalua = evaServ.buscaById(id);
         model.addAttribute("titulo", "Lista de Docentes");
      
-        model.addAttribute("planestudio", plan);
+        model.addAttribute("evaluacion", evalua);
         model.addAttribute("asignaturas", asignatura);
-    
+        model.addAttribute("docentes", docente);
+        model.addAttribute("estudiantes", estudiante);
         
         return "/Docente/Evaluacionadd";
     }
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") Integer id,Model model){
-        planServ.eliminar(id);
+        evaServ.eliminar(id);
         return "redirect:/Docente/Evaluacion/listar";
     }
     
