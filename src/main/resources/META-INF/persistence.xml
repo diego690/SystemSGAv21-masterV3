@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="uteq.sga_SYStemSGAv21_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>uteq.sga.SYStemSGAv21.Entity.Aula</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Docentes</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.EntregaTareas</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Asignaciones</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Asignaturas</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.MaterialDidactico</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.DocumentosEstudiante</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.YearsAcademicos</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Mensajes</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Matriculacion</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Cuatrimestres</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Evaluaciones</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Secciones</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Grupos</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.DocumentoRepresentante</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Tipodocumento</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Estudiantes</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Turnos</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Notastareas</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Horarioclase</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Usuarios</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Time</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Pagos</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Niveles</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Carreras</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Horarios</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Materias</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.PlanEstudio</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Documentos</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.InscripcionesAsignaturas</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.NumerosAsignaciones</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.Representante</class>
+    <class>uteq.sga.SYStemSGAv21.Entity.PlanificacionTareas</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://190.15.134.7:8080/Sis_SGA"/>
+      <property name="javax.persistence.jdbc.user" value="appti"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="@Aplicaciones@TecnologiaInternet@2021"/>
+    </properties>
+  </persistence-unit>
+</persistence>

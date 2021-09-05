@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+                    <meta name="author" content="GeeksLabs">
+                        <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+                            <link rel="shortcut icon" th:href="@{/img/favicon.png}">
+
+                                <title>Blank | Creative - Bootstrap 3 Responsive Admin Template</title>
+
+                                <link rel="canonical" href="https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/">
+                                    <!-- Bootstrap CSS -->
+                                    <link th:href="@{/css/bootstrapNEW.min.css}" rel="stylesheet">
+                                        <!-- bootstrap theme -->
+                                        <link th:href="@{/css/bootstrapNEW-theme.css}" rel="stylesheet">
+                                            <!--external css-->
+                                            <!-- font icon -->
+                                            <link th:href="@{/css/elegant-icons-styleNEW.css}" rel="stylesheet" />
+                                            <link th:href="@{/css/font-awesomeNEW.min.css}" rel="stylesheet" />
+                                            <!-- Custom styles -->
+                                            <link th:href="@{/css/styleNEW.css}" rel="stylesheet">
+                                                <link th:href="@{/css/style-responsiveNEW.css}" rel="stylesheet" />
+
+                                                <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+                                                <!--[if lt IE 9]>
+                                                    <script src="js/html5shiv.js"></script>
+                                                    <script src="js/respond.min.js"></script>
+                                                    <script src="js/lte-ie7.js"></script>
+                                                  <![endif]-->
+
+                                                <!-- =======================================================
+                                                  Theme Name: NiceAdmin
+                                                  Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+                                                  Author: BootstrapMade
+                                                  Author URL: https://bootstrapmade.com
+                                                ======================================================= -->
+                                                </head>
+
+                                                <body>
+                                                    <!-- container section start -->
+                                                    <section id="container" class="">
+                                                        <!--header start-->
+
+                                                        <header class="header dark-bg">
+                                                            <div class="toggle-nav">
+                                                                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+                                                            </div>
+
+                                                            <!--logo start-->
+                                                            <a href="@{/init}" class="logo">Nice <span class="lite">Admin</span></a>
+                                                            <!--logo end-->
+
+                                                            <div class="nav search-row" id="top_menu">
+                                                                <!--  search form start -->
+                                                                <ul class="nav top-menu">
+                                                                    <li>
+                                                                        <form class="navbar-form">
+                                                                            <input class="form-control" placeholder="Search" type="text">
+                                                                        </form>
+                                                                    </li>
+                                                                </ul>
+                                                                <!--  search form end -->
+                                                            </div>
+                                                        </header>
+                                                        <!--header end-->
+
+                                                        <!--sidebar start-->
+                                                        <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a class="" th:href="@{/Admin/Niveles/Dashboard}">
+                          <i class="icon_house_alt"></i>
+                          <span>Dashboard</span>
+                      </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Personas</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" th:href="@{/docentes}">Docentes</a></li>
+              <li><a class="" th:href="@{/estudiantes}">Estudiantes</a></li>
+              <li><a class="" href="form_validation.html">Representnates</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>Tareas</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="general.html">Enviar Tareas</a></li>
+              <li><a class="" href="buttons.html">Entrega Tareas</a></li>
+              <li><a class="" href="grids.html">Notas</a></li>
+            </ul>
+          </li>
+           <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>Documentos</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="general.html">Representantes</a></li>
+              <li><a class="" href="buttons.html">Estudiantes</a></li>
+              <li><a class="" href="grids.html">Docentes</a></li>
+            </ul>
+          </li>
+          <li>
+          <li>
+            <a class="" href="chart-chartjs.html">
+                          <i class="icon_piechart"></i>
+                          <span>Matriculacion</span>
+
+                      </a>
+
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_table"></i>
+                          <span>Escuela</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="basic_table.html">Basic Table</a></li>
+              <li><a class="" href="basic_table.html">Basic Table</a></li>
+              <li><a class="" href="basic_table.html">Basic Table</a></li>
+              <li><a class="" href="basic_table.html">Basic Table</a></li>
+            </ul>
+              
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_documents_alt"></i>
+                          <span>Pages</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="profile.html">Profile</a></li>
+              <li><a class="" href="login.html"><span>Login Page</span></a></li>
+              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
+              <li><a class="" href="blank.html">Blank Page</a></li>
+              <li><a class="" href="404.html">404 Error</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+                                                        <!--sidebar end-->
+
+                                                        <!--main content start-->
+                                                        <section id="main-content">
+                                                            <section class="wrapper">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <h3 class="page-header"><i class="fa fa fa-bars"></i> Docentes</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- page start-->
+                                                                <div class="row">
+                                                                    <div class="col-lg-12">
+                                                                        <section class="panel">
+                                                                           <h2 th:text="${titulo}">Section title</h2>
+
+                                                        <form  th:object="${representante}" class="table-responsive"  th:action="@{/Admin/Representante/save}" method="post"> 
+                                                            <div class="form-group">
+                                                                <input th:field="*{representanteid}" type="hidden"/>
+                                                                <label class="col-md-2" for="nombres">Nombres Representante</label>
+                                                                <input th:field="*{nombres}" type="text" class="form-control form-control-sm col-md-6" placeholder="Nombres Docente">
+                                                                    <small></small>
+                                                            </div>
+                                                            <div class="form-group">
+                                                               
+                                                                <label class="col-md-2" for="apellidos">Apellidos Representante</label>
+                                                                <input maxlength="50"
+                                                                    th:field="*{apellidos}" type="text" class="form-control form-control-sm col-md-6" placeholder="Apellidos Docente">
+                                                                    <small></small>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-2" for="cedula">Numero de Cedula</label>
+                                                                <input maxlength="15"
+                                                                       th:field="*{cedula}" type="text" class="form-control form-control-sm col-md-6" id="cedula" placeholder="numero de Cedula">
+                                                                    <small></small>
+                                                            </div>
+                                                            
+                                                             <div class="form-group">
+                                                                <label class="col-md-2" for="direccion">Direccion Domicilio</label>
+                                                                <input maxlength="50"
+                                                                    th:field="*{direccion}" type="text" class="form-control form-control-sm col-md-6" id="direccion" placeholder="Direccion Domicilio">
+                                                                    <small></small>
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label class="col-md-2" for="correo">Email<span class="required">*</span></label>
+                                                                <input maxlength="50" required
+                                                                    th:field="*{correo}" type="email" class="form-control form-control-sm col-md-6"  id="email" name="email" placeholder="Correo Electronico">
+                                                                    <small></small>
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label class="col-md-2" for="sexo">Sexo</label>
+                                                                <select  class="form-control form-control-sm col-md-4" id="sexo">
+                                                                    <option>Seleccione su Sexo</option>
+                                                                    <option th:field="*{sexo}" value="H">Hombre</option>
+                                                                    <option th:field="*{sexo}" value="M">Mujer</option>
+                                                                </select>    <small></small>
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label class="col-md-2" for="telefono">Telefono Movil - Domicilio</label>
+                                                                <input maxlength="10"
+                                                                    th:field="*{telefono}" type="text" class="form-control form-control-sm col-md-6" id="telefono" placeholder="DIreccion vivienda">
+                                                                    <small></small>
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label class="col-md-2" for="Parentesco">Parentesco</label>
+                                                                <input maxlength="20" th:field="*{parentesco}" type="text" class="form-control form-control-sm col-md-6" id="parentesco" placeholder="Numero Celular Movil">
+                                                                    <small></small>
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label class="col-md-2" for="movil"># Numero de Telefono</label>
+                                                                <input maxlength="10" th:field="*{movil}" type="text" class="form-control form-control-sm col-md-6" id="movil" placeholder="Numero Celular Movil">
+                                                                    <small></small>
+                                                             </div><br/>
+                                                            <input class="w-auto btn btn-lg btn-primary" type="submit" value="Guardar"/>
+                                                            <a th:href="@{/Admin/Representante/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
+                                                        </form>
+                                                                                    <!-- page end-->
+                                                                                    </section>
+                                                                    </div></div>
+                                                                                    </section>
+                                                                                    <!--main content end-->
+                                                                                    
+                                                                                    </section>
+                                                                                    <!-- container section end -->
+                                                                                    <!-- javascripts -->
+                                                                                    <script th:src="@{/js/jquery.js}"></script>
+                                                                                    <script th:src="@{/js/bootstrap.min.js}"></script>
+                                                                                    <!-- nice scroll -->
+                                                                                    <script th:src="@{/js/jquery.scrollTo.min.js}"></script>
+                                                                                    <script th:src="@{/js/jquery.nicescroll.js}" type="text/javascript"></script>
+                                                                                    <!--custome script for all page-->
+                                                                                    <script th:src="@{/js/scripts.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.validate.min.js}"></script>
+
+  <!-- custom form validation script for this page-->
+  <script th:src="@{/js/form-validation-script.js}"></script>
+
+                                                                                    </body>
+
+                                                                                    </html>
