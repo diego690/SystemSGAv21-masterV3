@@ -40,7 +40,7 @@ public class EntregaTareasAdminController {
         model.addAttribute("titulo", "Lista de Tareas");
         List<EntregaTareas> entregaT = ent_tar_Serv.listarTodos();
         model.addAttribute("entregaT", entregaT);
-        return "/Administrator/EntregaTareaslist";
+        return "/Docente/EntregaTareaslist";
     }
      @GetMapping("/Create")
     public String crear(Model model){
@@ -49,7 +49,7 @@ public class EntregaTareasAdminController {
         model.addAttribute("asigantura", asigServ.listarTodos());
         model.addAttribute("titulo", "Lista de Docentes");
         model.addAttribute("entregaT", document);
-        return "/Administrator/EntregaTareasadd";
+        return "/Docente/EntregaTareasadd";
     }
     @PostMapping("/save")
     public String guarda(@ModelAttribute EntregaTareas user){
@@ -64,11 +64,11 @@ public class EntregaTareasAdminController {
         model.addAttribute("asigantura", asigServ.listarTodos());
         model.addAttribute("titulo", "Lista de Docentes");
         model.addAttribute("entregaT", document);
-        return "/Administrator/EntregaTareasadd";
+        return "/Docente/EntregaTareasadd";
     }
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") Integer id,Model model){
         ent_tar_Serv.eliminar(id);
-        return "redirect:/Admin/Docentes/listar";
+        return "redirect:/Docente/Docentes/listar";
     }
 }

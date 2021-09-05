@@ -27,7 +27,7 @@ import uteq.sga.SYStemSGAv21.Services.IPlanEstudioServices;
  * @author capur
  */
 @Controller
-@RequestMapping("/Admin/PlanEstudio")
+@RequestMapping("/Docente/PlanEstudio")
 public class PlanEstudioController {
     
     @Autowired
@@ -44,7 +44,7 @@ public class PlanEstudioController {
        
         List<PlanEstudio> plan = planServ.listarTodos();
          model.addAttribute("planestudio", plan);
-        return "/Administrator/PlanEstudiolist";
+        return "/Docente/PlanEstudiolist";
     }
      @GetMapping("/Create")
     public String crear(Model model){
@@ -59,13 +59,13 @@ public class PlanEstudioController {
         model.addAttribute("asignaturas", asignatura);
     
         
-        return "/Administrator/Evaluacionadd";
+        return "/Docente/Evaluacionadd";
     }
     @PostMapping("/save")
     public String guarda(@ModelAttribute PlanEstudio user){
         planServ.guardar(user);
         System.out.println("Registro registrado correctamente");
-        return "redirect:/Admin/Evaluacion/listar";
+        return "redirect:/Docente/Evaluacion/listar";
     }
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Integer id,Model model){
@@ -79,12 +79,12 @@ public class PlanEstudioController {
         model.addAttribute("asignaturas", asignatura);
     
         
-        return "/Administrator/Evaluacionadd";
+        return "/Docente/Evaluacionadd";
     }
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") Integer id,Model model){
         planServ.eliminar(id);
-        return "redirect:/Admin/Evaluacion/listar";
+        return "redirect:/Docente/Evaluacion/listar";
     }
     
 }

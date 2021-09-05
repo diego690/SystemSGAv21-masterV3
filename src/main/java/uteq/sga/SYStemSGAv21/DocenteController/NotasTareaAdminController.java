@@ -24,7 +24,7 @@ import uteq.sga.SYStemSGAv21.Services.INotasTareasServices;
  * @author capur
  */
 @Controller
-@RequestMapping("/Admin/NotasTareas")
+@RequestMapping("/Docente/NotasTareas")
 public class NotasTareaAdminController {
     
     @Autowired
@@ -38,7 +38,7 @@ public class NotasTareaAdminController {
         model.addAttribute("titulo", "Listado de Notas de Tareas");
         List<Notastareas> notasT = notaserv.listarTodos();
         model.addAttribute("notasTareas", entregaTserv);
-        return "/Administrator/NotaTareaslist";
+        return "/Docente/NotaTareaslist";
     }
     @RequestMapping("/Create")
     public String crear(Model model){
@@ -47,13 +47,13 @@ public class NotasTareaAdminController {
         List<EntregaTareas> entregTarea = entregaTserv.listarTodos();
         model.addAttribute("entregaTareas", entregTarea);
         model.addAttribute("notasTarea", notasT);
-        return "/Administrator/NotasTareasAdd";
+        return "/Docente/NotasTareasAdd";
     }
     @PostMapping("/save")
     public String save(@ModelAttribute Notastareas user){
         notaserv.guardar(user);
         System.out.println("Notas registradas correctamente");
-        return "redirect:/Admin/NotasTareas/listar";
+        return "redirect:/Docente/NotasTareas/listar";
     }
     @RequestMapping("/edit/{id}")
     public String editar(@PathVariable("id") Integer id, Model model){
@@ -62,13 +62,13 @@ public class NotasTareaAdminController {
         List<EntregaTareas> entregTarea = entregaTserv.listarTodos();
         model.addAttribute("entregaTareas", entregTarea);
         model.addAttribute("notasTarea", notasT);
-        return "/Administrator/NotasTareasAdd";
+        return "/Docente/NotasTareasAdd";
     }
     @RequestMapping("/delete/{id}")
     public String delete(@PathVariable("id") Integer id, Model model){
         notaserv.eliminar(id);
         System.out.println("Notas eliminada correctamente");
-        return "redirect:/Admin/NotasTareas/listar";
+        return "redirect:/Docente/NotasTareas/listar";
     }
     
 }

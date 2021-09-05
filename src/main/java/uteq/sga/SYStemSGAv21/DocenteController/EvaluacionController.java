@@ -29,7 +29,7 @@ import uteq.sga.SYStemSGAv21.Services.IEvaluacionesServices;
  * @author capur
  */
 @Controller
-@RequestMapping("/Admin/Evaluacion")
+@RequestMapping("/Docente/Evaluacion")
 public class EvaluacionController {
     
      @Autowired
@@ -50,7 +50,7 @@ public class EvaluacionController {
     public String page(Model model) {
         List<Evaluaciones> evalua = evaServ.listarTodos();
         model.addAttribute("evaluacion", evalua);
-        return "/Administrator/Evaluacionlist";
+        return "/Docente/Evaluacionlist";
     }
      @GetMapping("/Create")
     public String crear(Model model){
@@ -66,13 +66,13 @@ public class EvaluacionController {
         model.addAttribute("docentes", docente);
         model.addAttribute("estudiantes", estudiante);
         
-        return "/Administrator/Evaluacionadd";
+        return "/Docente/Evaluacionadd";
     }
     @PostMapping("/save")
     public String guarda(@ModelAttribute Evaluaciones user){
         evaServ.guardar(user);
         System.out.println("Registro registrado correctamente");
-        return "redirect:/Admin/Evaluacion/listar";
+        return "redirect:/Docente/Evaluacion/listar";
     }
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Integer id,Model model){
@@ -87,12 +87,12 @@ public class EvaluacionController {
         model.addAttribute("docentes", docente);
         model.addAttribute("estudiantes", estudiante);
         
-        return "/Administrator/Evaluacionadd";
+        return "/Docente/Evaluacionadd";
     }
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") Integer id,Model model){
         evaServ.eliminar(id);
-        return "redirect:/Admin/Evaluacion/listar";
+        return "redirect:/Docente/Evaluacion/listar";
     }
     
 }

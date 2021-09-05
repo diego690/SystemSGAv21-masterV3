@@ -29,7 +29,7 @@ import uteq.sga.SYStemSGAv21.Services.IPlanificacionTareasServices;
  * @author capur
  */
 @Controller
-@RequestMapping("/Admin/PlanificacionTarea")
+@RequestMapping("/Docente/PlanificacionTarea")
 public class PlanificacionTareaController {
     
     @Autowired
@@ -48,7 +48,7 @@ public class PlanificacionTareaController {
     public String page(Model model) {
         List<PlanificacionTareas> pt = ipts.listarTodos();
         model.addAttribute("planificacionT", pt);
-        return "/Administrator/PlanificacionTareaslist";
+        return "/Docente/PlanificacionTareaslist";
     }
      @GetMapping("/Create")
     public String crear(Model model){
@@ -64,13 +64,13 @@ public class PlanificacionTareaController {
         model.addAttribute("docentes", docente);
        model.addAttribute("cursos", carrerases);
         
-        return "/Administrator/PlanificacionTareasadd";
+        return "/Docente/PlanificacionTareasadd";
     }
     @PostMapping("/save")
     public String guarda(@ModelAttribute PlanificacionTareas user){
         ipts.guardar(user);
         System.out.println("Registro registrado correctamente");
-        return "redirect:/Admin/PlanificacionTarea/listar";
+        return "redirect:/Docente/PlanificacionTarea/listar";
     }
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Integer id,Model model){
@@ -85,11 +85,11 @@ public class PlanificacionTareaController {
         model.addAttribute("docentes", docente);
        model.addAttribute("cursos", carrerases);
         
-        return "/Administrator/PlanficacionTareasadd";
+        return "/Docente/PlanficacionTareasadd";
     }
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") Integer id,Model model){
         ipts.eliminar(id);
-        return "redirect:/Admin/PlanificacionTarea/listar";
+        return "redirect:/Docente/PlanificacionTarea/listar";
     }
 }
