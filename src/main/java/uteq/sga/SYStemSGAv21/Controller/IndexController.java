@@ -47,7 +47,11 @@ public class IndexController {
         }
         if(user.equals("student")){
             ud="/Student/index";
-            u="Student";
+            u="Juana Anchundia";
+        }
+        if(user.equals("Docente")){
+            ud="/Docente/index";
+            u="Lic. Marcos Perlo";
         }
         model.addAttribute("use", u);
         model.addAttribute("userr", user);

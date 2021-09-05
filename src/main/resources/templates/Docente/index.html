@@ -59,7 +59,7 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         
-        <h1 class="h2" th:text="${use}+': '+${niveles}">Dashboard</h1>
+        <h1 class="h2" th:text="${use}+': '+${userr}">Dashboard</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -77,38 +77,8 @@
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Niveles Usuarios.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Niveles/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-              
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Usuarios.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Usuarios/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
+      
+       
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -117,7 +87,7 @@
               <p class="card-text">Docentes.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Docentes/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/Docentes/listar}">View</a>
                   <a type="button" class="btn btn-sm btn-outline-secondary">Edit</a>
                 </div>
                 
@@ -126,87 +96,12 @@
           </div>
         </div>
 
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        
+       
+       
 
-            <div class="card-body">
-              <p class="card-text">Representante.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Representante/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Estudiantes.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Estudiante/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-             
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Periodos Academicos.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Years/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-             
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Tipos de Documentos.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/TipoDocumento/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Secciones.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Secciones/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-              
-              </div>
-            </div>
-          </div>
-        </div>
+      
+      
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -215,7 +110,7 @@
               <p class="card-text">Pagos de Aranceles.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Pagos/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/Pagos/listar}">View</a>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 
@@ -231,7 +126,7 @@
               <p class="card-text">Documentos.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Documentos/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/Documentos/listar}">View</a>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 
@@ -247,7 +142,7 @@
               <p class="card-text">Entrega Tareas.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/EntregaTareas/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/EntregaTareas/listar}">View</a>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 
@@ -263,7 +158,7 @@
               <p class="card-text">Notas Tareas.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/NotasTareas/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/NotasTareas/listar}">View</a>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 
@@ -271,53 +166,9 @@
             </div>
           </div>
         </div>
-          <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Matriculacion.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Matriculacion/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-           <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Matriculacion.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/horario}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-           <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Asignaciones.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Asignaciones/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
+          
+         
+          
         </div>
            <div class="col">
           <div class="card shadow-sm">
@@ -327,7 +178,7 @@
               <p class="card-text">Evaluaciones.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Evaluacion/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/Evaluacion/listar}">View</a>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 
@@ -335,22 +186,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">Inscripciones de Asignaturas.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Inscripciones/listar}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
+        
            <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -359,7 +195,7 @@
               <p class="card-text">Material Didactico.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/Material.Didactico/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/Material.Didactico/listar}">View</a>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 
@@ -375,7 +211,7 @@
               <p class="card-text">Planificacion Tareas.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Admin/PlanificacionTarea/listar}">View</a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/Docente/PlanificacionTarea/listar}">View</a>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 

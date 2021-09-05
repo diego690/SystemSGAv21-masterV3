@@ -83,7 +83,7 @@
                                                                     <li class="sub-menu">
                                                                         <a href="javascript:;" class="">
                                                                             <i class="icon_document_alt"></i>
-                                                                            <span>Representados</span>
+                                                                            <span>Aula Virtual</span>
                                                                             <span class="menu-arrow arrow_carrot-right"></span>
                                                                         </a>
                                                                         <ul class="sub">
@@ -117,65 +117,103 @@
                                                             <section class="wrapper">
                                                                 <div class="row">
                                                                     <div class="col-lg-12">
-                                                                        <h3 class="page-header"><i class="fa fa fa-bars"></i> Tareas</h3>
-
+                                                                        <h3 class="page-header"><i class="fa fa fa-bars"></i> Pages</h3>
+                                                                        <ol class="breadcrumb">
+                                                                            <li><i class="fa fa-home"></i><a th:action="@{/init}">Home</a></li>
+                                                                            <li><i class="fa fa-bars"></i>Pages</li>
+                                                                            <li><i class="fa fa-square-o"></i>Pages</li>
+                                                                        </ol>
                                                                     </div>
                                                                 </div>
                                                                 <!-- page start-->
-                                                                <form th:object="${documentos}" class="form-group " th:action="@{/Archivo/Estudiante/save}" method="post"> 
+                                                                <div class="row">
+                                                                    <div class="col-lg-12" th:each="tar:${tareasd}">
+                                                                        <section class="panel">
+                                                                            <header class="panel-heading">
+                                                                                Entregar Tarea
+                                                                            </header>
+                                                                            <form th:object="${tareasd}" class="form-group " th:action="@{/Archivo/Estudiante/upload/}+${tar.identregatareas}" method="post" enctype="multipart/form-data"> 
+                                                                                
                                                                                 <div class="form-group">
-                                                                                    <input th:field="*{documentoid}" type="hidden"/>
-                                                                                    <label class="col-md-2" for="descripciondocumento">Id Tarea</label>
-                                                                                    <input th:field="*{descripciondocumento}" type="text" class="form-control form-control-sm col-md-6" th:each="tar1:${tareas}" th:text="${tar1.identregatareas}" th:value="${tar1.identregatareas}">
+                                                                                    <input th:field="*{identregatareas}" type="hidden"/>
+                                                                                    <label class="col-md-2" for="codigotareadocente">Codigo Docente</label>
+                                                                                    <input th:field="*{codigotareadocente}" type="text" class="form-control form-control-sm col-md-6">
                                                                                         <small></small>
                                                                                 </div>
                                                                                 <div class="form-group">
 
-                                                                                    <label class="col-md-2" for="documento">Documento</label>
-                                                                                    <input th:field="*{documento}" type="text" class="form-control form-control-sm col-md-6" th:text="${paht}" th:value="${paht}">
+                                                                                    <label class="col-md-2" for="descripcion">Descripcion</label>
+                                                                                    <input th:field="*{descripcion}" type="text" class="form-control form-control-sm col-md-6">
                                                                                         <small></small>
                                                                                 </div>
+                                                                                <div class="form-group">
+
+                                                                                    <label class="col-md-2" for="codigoenviotarea">Codigo Tarea</label>
+                                                                                    <input th:field="*{codigoenviotarea}" type="text" class="form-control form-control-sm col-md-6">
+                                                                                        <small></small>
+                                                                                </div>
+                                                                                <div class="form-group">
+
+                                                                                    <label class="col-md-2" for="archivo">Archivo</label>
+                                                                                    <input th:field="*{archivo}" type="text" class="form-control form-control-sm col-md-6" th:value="${paht}">
+                                                                                        <small></small>
+                                                                                </div>
+                                                                                <div class="form-group">
+
+                                                                                    <label class="col-md-2" for="fechaentrega">Fecha Entrega</label>
+                                                                                    <input th:field="*{fechaentrega}" type="text" class="form-control form-control-sm col-md-6">
+                                                                                        <small></small>
+                                                                                </div>
+                                                                                <div class="form-group">
+
+                                                                                    <label class="col-md-2" for="idasignatura">Asignatura</label>
+                                                                                    <input th:field="*{idasignatura}" type="text" class="form-control form-control-sm col-md-6">
+                                                                                        <small></small>
+                                                                                </div> 
                                                                                 <div class="form-group">
 
                                                                                     <label class="col-md-2" for="idestudiante">Estudiante</label>
-                                                                                    <input th:field="*{idestudiante}" type="text" class="form-control form-control-sm col-md-6" th:each="tar3:${tareas}" th:text="${tar3.idestudiante.idestudiante}" th:value="${tar3.idestudiante.idestudiante}">
+                                                                                    <input th:field="*{idestudiante}" type="text" class="form-control form-control-sm col-md-6">
                                                                                         <small></small>
                                                                                 </div>
-                                                                                <div class="form-group">
+                                                                                <br><br>
+                                                                                        <h1>Subir deber</h1>
+                                                                                        <input type="file" name="file"/><br><br>
+                                                                                                <input class="btn btn-primary" type="submit" value="Entregar"/>
+                                                                                                <br><br>
+                                                          
+                                                                                                        <br/>
 
-                                                                                    <label class="col-md-2" for="fechasubida">Estudiante</label>
-                                                                                    <input th:field="*{fechasubida}" type="text" class="form-control form-control-sm col-md-6" th:each="tar4:${tareas}" th:text="${tar4.fechaentrega}" th:value="${tar4.fechaentrega}">
-                                                                                        <small></small>
-                                                                                </div>
-                                                                               <input class="btn btn-primary" type="submit" value="Entregar"/>
+
                                                                                                         </form>
-                                                                                                                    <!-- page end-->
-                                                                                                                    </section>
-                                                                                                                    </section>
-                                                                                                                    <!--main content end-->
-                                                                                                                    <div class="text-right">
-                                                                                                                        <div class="credits">
-                                                                                                                            <!--
-                                                                                                                              All the links in the footer should remain intact.
-                                                                                                                              You can delete the links only if you purchased the pro version.
-                                                                                                                              Licensing information: https://bootstrapmade.com/license/
-                                                                                                                              Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-                                                                                                                            -->
-                                                                                                                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    </section>
-                                                                                                                    <!-- container section end -->
-                                                                                                                    <!-- javascripts -->
-                                                                                                                    <script th:src="@{/js/jquery.js}"></script>
-                                                                                                                    <script th:src="@{/js/bootstrap.min.js}"></script>
-                                                                                                                    <!-- nice scroll -->
-                                                                                                                    <script th:src="@{/js/jquery.scrollTo.min.js}"></script>
-                                                                                                                    <script th:src="@{/js/jquery.nicescroll.js}" type="text/javascript"></script>
-                                                                                                                    <!--custome script for all page-->
-                                                                                                                    <script th:src="@{/js/scripts.js}"></script>
+
+                                                                                                        <!-- page end-->
+                                                                                                        </section>
+                                                                                                        </section>
+                                                                                                        <!--main content end-->
+                                                                                                        <div class="text-right">
+                                                                                                            <div class="credits">
+                                                                                                                <!--
+                                                                                                                  All the links in the footer should remain intact.
+                                                                                                                  You can delete the links only if you purchased the pro version.
+                                                                                                                  Licensing information: https://bootstrapmade.com/license/
+                                                                                                                  Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+                                                                                                                -->
+                                                                                                                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        </section>
+                                                                                                        <!-- container section end -->
+                                                                                                        <!-- javascripts -->
+                                                                                                        <script th:src="@{/js/jquery.js}"></script>
+                                                                                                        <script th:src="@{/js/bootstrap.min.js}"></script>
+                                                                                                        <!-- nice scroll -->
+                                                                                                        <script th:src="@{/js/jquery.scrollTo.min.js}"></script>
+                                                                                                        <script th:src="@{/js/jquery.nicescroll.js}" type="text/javascript"></script>
+                                                                                                        <!--custome script for all page-->
+                                                                                                        <script th:src="@{/js/scripts.js}"></script>
 
 
-                                                                                                                    </body>
+                                                                                                        </body>
 
-                                                                                                                    </html>
+                                                                                                        </html>
