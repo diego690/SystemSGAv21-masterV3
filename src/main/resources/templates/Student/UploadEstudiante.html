@@ -133,7 +133,7 @@
                                                                                 Entregar Tarea
                                                                             </header>
                                                                             <form th:object="${tareasd}" class="form-group " th:action="@{/Archivo/Estudiante/upload/}+${tar.identregatareas}" method="post" enctype="multipart/form-data"> 
-                                                                                
+
                                                                                 <div class="form-group">
                                                                                     <input th:field="*{identregatareas}" type="hidden"/>
                                                                                     <label class="col-md-2" for="codigotareadocente">Codigo Docente</label>
@@ -181,7 +181,7 @@
                                                                                         <input type="file" name="file"/><br><br>
                                                                                                 <input class="btn btn-primary" type="submit" value="Entregar"/>
                                                                                                 <br><br>
-                                                          
+
                                                                                                         <br/>
 
 

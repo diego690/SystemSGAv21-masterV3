@@ -32,6 +32,9 @@ public class DocentesController {
     @RequestMapping("/listar")
     public String page(Model model) {
         List<Docentes> docent= docenServi.listarTodos();
+        model.addAttribute("title", "System SGA");
+        model.addAttribute(("System"), "SYSTEM");
+        model.addAttribute(("Sga"), "SGA");
         model.addAttribute("titulo", "Nuevo Docente");
         model.addAttribute("docente", docent);
         return "/Administrator/Docenteslist";
@@ -40,6 +43,7 @@ public class DocentesController {
     public String crear(Model model){
         Docentes document = new Docentes();
         model.addAttribute("titulo", "Lista de Docentes");
+          model.addAttribute("title", "System SGA");
         model.addAttribute("docente", document);
         return "/Administrator/DocentesAdd";
     }
@@ -51,6 +55,7 @@ public class DocentesController {
     }
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable("id") Integer id,Model model){
+          model.addAttribute("title", "System SGA");
         Docentes document = docenServi.buscaById(id);
         model.addAttribute("titulo", "Editar Docente");
         model.addAttribute("docente", document);

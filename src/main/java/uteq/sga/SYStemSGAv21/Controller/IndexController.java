@@ -32,6 +32,10 @@ public class IndexController {
     public String login(){
         return "login";
     }
+     @GetMapping("/Admin/index")
+    public String index(){
+        return "/Administrator/index";
+    }
     
     @Autowired
     private IUsuariosServices userServices;
