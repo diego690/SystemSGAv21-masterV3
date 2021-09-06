@@ -173,7 +173,7 @@
                                                                 <!-- page start-->
                                                                 <div class="row">
                                                                     <div class="col-lg-12">
-                                                                        <a class="btn btn-success" th:href="@{/Admin/Documentos/create}" title="Bootstrap 3 themes generator">Nueva Documento</a>
+                                                                        <a class="btn btn-success" th:href="@{/Docente/Documentos/create}" title="Bootstrap 3 themes generator">Nueva Documento</a>
                                                                         <section class="panel">
                                                                             <header class="panel-heading">
                                                                                 Tabla Documentos
@@ -201,8 +201,8 @@
               <td th:text="${atv.fechasubida}">placeholder</td>
                                                                                         <td>
                                                                                             <div class="btn-group">
-                                                                                                <a class="btn btn-success" th:href="@{/Admin/Documentos/edit/}+${atv.iddocumento}"><i class="icon_check_alt2"></i></a>
-                                                                                                <a class="btn btn-danger" th:href="@{/Admin/Documentos/delete}+${atv.iddocumento}"><i class="icon_check_alt2"></i></a>
+                                                                                                <a class="btn btn-success" th:href="@{/Docente/Documentos/edit/}+${atv.iddocumento}"><i class="icon_check_alt2"></i></a>
+                                                                                                <a class="btn btn-danger" th:href="@{/Docente/Documentos/delete}+${atv.iddocumento}"><i class="icon_check_alt2"></i></a>
                                                                                             </div>
                                                                                         </td>
                                                                                     </tr>

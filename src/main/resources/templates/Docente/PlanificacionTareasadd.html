@@ -175,7 +175,7 @@
                                                                     <div class="col-lg-12">
                                                                         <section class="panel">
                                                                             <h2 th:text="${titulo}">Section title</h2>
-                                                                            <form  th:object="${planificacionT}" class="form-group " th:action="@{/Admin/PlanificacionTarea/save}" method="post"> 
+                                                                            <form  th:object="${planificacionT}" class="form-group " th:action="@{/Docente/PlanificacionTarea/save}" method="post"> 
                                                                                 <div class="form-group">
                                                                                     <input th:field="*{idplanificacion}" type="hidden"/>
                                                                                     <label class="col-md-2" for="nombres">Descripcion</label>
@@ -249,7 +249,7 @@
                                                                                 </div>
                                                                                 <br/>
                                                                                 <input class="w-auto btn btn-lg btn-primary" type="submit" value="Guardar"/>
-                                                                                <a th:href="@{/Admin/PlanificacionTarea/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
+                                                                                <a th:href="@{/Docente/PlanificacionTarea/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
                                                                             </form>
                                                                             <!-- page end-->
                                                                         </section>

@@ -175,7 +175,7 @@
                                                                     <div class="col-lg-12">
                                                                         <section class="panel">
                                                                             <h2 th:text="${titulo}">Section title</h2>
-<form  th:object="${evaluacion}" class="form-group " th:action="@{/Admin/Asignaciones/save}" method="post"> 
+<form  th:object="${evaluacion}" class="form-group " th:action="@{/Docente/Asignaciones/save}" method="post"> 
                                                             <div class="form-group">
                                                                 <input th:field="*{idevaluacion}" type="hidden"/>
                                                                 <label class="col-md-2" for="nombres">Descripcion</label>
@@ -230,7 +230,7 @@
                                                              </div>
                                                             <br/>
                                                             <input class="w-auto btn btn-lg btn-primary" type="submit" value="Guardar"/>
-                                                            <a th:href="@{/Admin/Evaluacion/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
+                                                            <a th:href="@{/Docente/Evaluacion/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
                                                         </form>
                                                                                     <!-- page end-->
                                                                                     </section>

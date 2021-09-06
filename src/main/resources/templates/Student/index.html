@@ -65,7 +65,9 @@
           </li>
         </ul>
         <!--  search form end -->
+        
       </div>
+     
     </header>
     <!--header end-->
 
@@ -80,16 +82,18 @@
                           <span>Inicio</span>
                       </a>
           </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Aula Virtual</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
+         
+            <li>
+            <a class="" th:href="@{/Stud/NotasTareas/listar}">
+                          <i class="icon_genius"></i>
+                          <span>Notas</span>
                       </a>
-            <ul class="sub">
-              <li><a class="" th:href="@{/Stud/NotasTareas/listar}">Notas</a></li>
-              <li><a class="" th:href="@{/Stud/EntregaTareas/listar}">Tareas</a></li>
-            </ul>
+            </li><!-- comment -->
+            <li>
+            <a class="" th:href="@{/Stud/EntregaTareas/listar}">
+                          <i class="icon_genius"></i>
+                          <span>Tareas</span>
+                      </a>
           </li>
           <li>
             <a class="" th:href="@{/Stud/Docentes/listar}">
@@ -101,6 +105,14 @@
             <a class="" th:href="@{/Stu/Years/listar}">
                           <i class="icon_piechart"></i>
                           <span>Periodos</span>
+
+                      </a>
+
+          </li>
+             <li>
+           <a class="nav-link px-3" th:href="@{/logout}">Sign out</a>
+                          <i class="icon_piechart"></i>
+                          <span></span>
 
                       </a>
 

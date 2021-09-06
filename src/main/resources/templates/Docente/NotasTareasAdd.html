@@ -126,7 +126,7 @@
                                                                         <section class="panel">
                                                                               <h2 th:text="${titulo}">Section title</h2>
 
-                                                        <form class="form-control col-md-3" th:object="${notasTarea}" th:action="@{/Admin/NotasTareas/save}" method="post"> 
+                                                        <form class="form-control col-md-3" th:object="${notasTarea}" th:action="@{/Docente/NotasTareas/save}" method="post"> 
                                                             <div class="form-group">
                                                                 <input th:field="*{idnotastareas}" type="hidden"/>
                                                                 <label class="col-md-2" for="identregatareas">Tarea</label>
@@ -144,7 +144,7 @@
                                                            
                                                              <br/>
                                                             <input class="w-auto btn btn-lg btn-primary" type="submit" value="Guardar"/>
-                                                            <a th:href="@{/Admin/NotasTareas/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
+                                                            <a th:href="@{/Docente/NotasTareas/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
                                                         </form>
                                                                                     <!-- page end-->
                                                                                     </section>

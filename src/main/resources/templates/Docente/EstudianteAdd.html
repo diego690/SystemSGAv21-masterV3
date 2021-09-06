@@ -175,7 +175,7 @@
                                                                     <div class="col-lg-12">
                                                                         <section class="panel">
                                                                             <h2 th:text="${titulo}">Section title</h2>
-<form  th:object="${estudiante}" class="form-group " th:action="@{/Admin/Representante/save}" method="post"> 
+<form  th:object="${estudiante}" class="form-group " th:action="@{/Docente/Representante/save}" method="post"> 
                                                             <div class="form-group">
                                                                 <input th:field="*{idestudiante}" type="hidden"/>
                                                                 <label class="col-md-2" for="nombres">Carnet Estudiante</label>
@@ -241,7 +241,7 @@
                                                                 </select>    <small></small>
                                                              </div><br/>
                                                             <input class="w-auto btn btn-lg btn-primary" type="submit" value="Guardar"/>
-                                                            <a th:href="@{/Admin/Estudiante/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
+                                                            <a th:href="@{/Docente/Estudiante/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
                                                         </form>
                                                                                     <!-- page end-->
                                                                                     </section>

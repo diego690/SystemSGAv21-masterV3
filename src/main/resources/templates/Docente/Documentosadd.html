@@ -87,18 +87,18 @@
                                                                             <span class="menu-arrow arrow_carrot-right"></span>
                                                                         </a>
                                                                         <ul class="sub">
-                                                                            <li><a class="" th:href="@{/Stud/NotasTareas/listar}">Notas</a></li>
-                                                                            <li><a class="" th:href="@{/Stud/EntregaTareas/listar}">Tareas</a></li>
+                                                                            <li><a class="" th:href="@{/Docente/NotasTareas/listar}">Notas</a></li>
+                                                                            <li><a class="" th:href="@{/StDocenteud/EntregaTareas/listar}">Tareas</a></li>
                                                                         </ul>
                                                                     </li>
                                                                     <li>
-                                                                        <a class="" th:href="@{/Stud/Docentes/listar}">
+                                                                        <a class="" th:href="@{/Docente/Docentes/listar}">
                                                                             <i class="icon_genius"></i>
                                                                             <span>Docentes</span>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a class="" th:href="@{/Stu/Years/listar}">
+                                                                        <a class="" th:href="@{/Docente/Years/listar}">
                                                                             <i class="icon_piechart"></i>
                                                                             <span>Periodos</span>
 
@@ -126,7 +126,7 @@
                                                                         <section class="panel">
                                                                             <h2 th:text="${titulo}">Section title</h2>
 
-                                                        <form class="form-control col-md-3" th:object="${documentos}" th:action="@{/Admin/Documentos/save}" method="post"> 
+                                                        <form class="form-control col-md-3" th:object="${documentos}" th:action="@{/Docente/Documentos/save}" method="post"> 
                                                             <div class="form-group">
                                                                 <input th:field="*{iddocumento}" type="hidden"/>
                                                                 <label class="col-md-2" for="idtipodocumento">Tipo de Documento</label>
@@ -160,7 +160,7 @@
                                                              </div>
                                                              <br/>
                                                             <input class="w-auto btn btn-lg btn-primary" type="submit" value="Guardar"/>
-                                                            <a th:href="@{/Admin/Documentos/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
+                                                            <a th:href="@{/Docente/Documentos/listar}"><input class="w-auto btn btn-lg btn-primary" type="button" value="Cancelar"/></a>
                                                         </form>
                                                                                     <!-- page end-->
                                                                                     </section>
